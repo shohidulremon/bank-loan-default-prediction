@@ -27,9 +27,12 @@ This project solves that problem by engineering a modular **Scikit-Learn `Column
 | **Informative Missingness** | `4,012` loans have missing `collateral_type`. These unsecured loans carry a **40.13% default rate** vs. **20.43%** for `Property`. | Imputed with constant `'None'` category via a dedicated `ColumnTransformer` branch. |
 
 ### Unified `ColumnTransformer` Branches:
-* **Numerical Features (13):** `SimpleImputer(strategy='median')` $ightarrow$ `StandardScaler()`
-* **Standard Categorical Features (`gender`, `loan_purpose`, `payment_frequency`):** `SimpleImputer(strategy='most_frequent')` $ightarrow$ `OneHotEncoder(drop='first', handle_unknown='ignore')`
-* **Collateral Feature (`collateral_type`):** `SimpleImputer(strategy='constant', fill_value='None')` $ightarrow$ `OneHotEncoder(drop='first', handle_unknown='ignore')`
+* **Numerical Features (13):** `SimpleImputer(strategy='median')` $
+ightarrow$ `StandardScaler()`
+* **Standard Categorical Features (`gender`, `loan_purpose`, `payment_frequency`):** `SimpleImputer(strategy='most_frequent')` $
+ightarrow$ `OneHotEncoder(drop='first', handle_unknown='ignore')`
+* **Collateral Feature (`collateral_type`):** `SimpleImputer(strategy='constant', fill_value='None')` $
+ightarrow$ `OneHotEncoder(drop='first', handle_unknown='ignore')`
 
 ---
 
@@ -67,12 +70,15 @@ Both **Built-in Impurity Importance** and **Permutation Importance** (mean drop 
 
 ```text
 ├── banking_loan_defaults.csv          # Raw dataset (10,050 BDT loan records)
-├── loan_default_lab_submission.ipynb  # End-to-end Jupyter Notebook pipeline
-├── loan_default_lab_submission.py     # Standalone Python script
+├── Bank_Loan_Default_prediction.ipynb # End-to-end Jupyter Notebook pipeline
+├── Bank_Loan_Default_prediction.py    # Standalone Python script
 ├── model_evaluation_dashboard.png     # ROC curves & model benchmark chart
 ├── attribute_importance_analysis.png  # Built-in vs. Permutation importance chart
 ├── requirements.txt                   # Python package dependencies
+├── linkdin_cover_slide                # Linkdin post
+├── linkdin_carousel_load_default      # linkdin post
 └── README.md                          # Project documentation
+
 ```
 
 ---
